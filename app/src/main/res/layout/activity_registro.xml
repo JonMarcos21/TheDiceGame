@@ -7,4 +7,100 @@
     android:background="@drawable/fondo"
     tools:context=".Registro">
 
+    <ImageView
+        android:id="@+id/logoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="144dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="94dp"
+        app:srcCompat="@drawable/logodado" />
+
+    <TextView
+        android:id="@+id/nombreApp"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoPrincipal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="125dp"
+        android:contentDescription="texto app"
+        android:fontFamily="@font/fredoka_nomral"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/Usuario"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombreApp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="@string/Usuario"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/Contraseña"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Usuario"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="@string/contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/acceso"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contraseña"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/button_rounder"
+        android:text="@string/Acceso" />
+
+    <Button
+        android:id="@+id/registrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contraseña"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_rounder"
+        android:layout_toEndOf="@+id/acceso"
+        android:text="@string/Registrar" />
+
+    <TextView
+        android:id="@+id/noregistrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contraseña"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="73dp"
+        android:fontFamily="@font/fredoka_nomral"
+        android:text="@string/noregistrado"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 </RelativeLayout>

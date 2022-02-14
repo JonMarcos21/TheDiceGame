@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TheDiceGame</string>
+    <string name="contraseña">Password</string>
+    <string name="Usuario">User</string>
+    <string name="Acceso">Login</string>
+    <string name="Registrar">Register</string>
+    <string name="noregistrado">Access without registration</string>
+</resources>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TheDiceGame</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Acceso">Acceso</string>
+    <string name="Registrar">Registrarse</string>
+    <string name="noregistrado">Acceder sin registrarse</string>
 </resources>
