@@ -6,4 +6,7 @@
     <string name="Acceso">Login</string>
     <string name="Registrar">Register</string>
     <string name="noregistrado">Access without registration</string>
+    <string name="formulario">Form</string>
+    <string name="email">Email</string>
+    <string name="nombre_usuario">Username</string>
 </resources>
