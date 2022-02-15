@@ -76,6 +76,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="7dp"
         android:background="@drawable/button_rounder"
+        android:fontFamily="@font/fredoka_nomral"
         android:onClick="inicio"
         android:text="@string/Acceso" />
 
@@ -88,6 +89,7 @@
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/acceso"
         android:background="@drawable/button_rounder"
+        android:fontFamily="@font/fredoka_nomral"
         android:onClick="registro"
         android:text="@string/Registrar" />
 

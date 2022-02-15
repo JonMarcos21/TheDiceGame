@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "813487419133",
+    "project_id": "thedicegame-8f16c",
+    "storage_bucket": "thedicegame-8f16c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813487419133:android:2a29d98ccbe56b29ef9894",
+        "android_client_info": {
+          "package_name": "com.example.thedicegame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813487419133-bt97a48522k8ihife2s7dctvpbb6ua0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKb-CT_1VPSSW-17F5dLirqkjAaCvkEEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813487419133-bt97a48522k8ihife2s7dctvpbb6ua0s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
