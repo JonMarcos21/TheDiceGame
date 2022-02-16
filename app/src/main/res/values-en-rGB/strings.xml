@@ -12,7 +12,5 @@
     <string name="bienvenido">Welcome</string>
     <string name="jugar">press the button to play</string>
     <string name="play">Play</string>
-    <string name="cerrar sesion">Exit</string>
-    <string name="cerrar sesion">Close sesion</string>
     <string name="salir">Close sesion</string>
 </resources>
