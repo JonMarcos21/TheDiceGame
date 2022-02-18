@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">TheDiceGame</string>
-    <string name="contraseña">Contraseña</string>
-    <string name="Usuario">Usuario</string>
-    <string name="Acceso">Acceso</string>
-    <string name="Registrar">Registrarse</string>
-    <string name="noregistrado">Acceder sin registrarse</string>
-    <string name="formulario">Formulario</string>
+    <string name="contraseña">Password</string>
+    <string name="Usuario">User</string>
+    <string name="Acceso">Login</string>
+    <string name="Registrar"><u>Not a member?</u></string>
+    <string name="noregistrado">Access without registration</string>
+    <string name="formulario">Form</string>
     <string name="email">Email</string>
-    <string name="nombre_usuario">Nombre de usuario</string>
-    <string name="bienvenido">Bienvenido</string>
-    <string name="jugar">Pulsa en el boton  para jugar</string>
-    <string name="play">Jugar</string>
-    <string name="salir">Cerrar sesión</string>
+    <string name="nombre_usuario">Username</string>
+    <string name="bienvenido">Welcome</string>
+    <string name="jugar">press the button to play</string>
+    <string name="play">Play</string>
+    <string name="salir">Close sesion</string>
 </resources>

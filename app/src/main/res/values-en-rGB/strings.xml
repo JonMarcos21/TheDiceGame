@@ -4,7 +4,7 @@
     <string name="contraseña">Password</string>
     <string name="Usuario">User</string>
     <string name="Acceso">Login</string>
-    <string name="Registrar">Register</string>
+    <string name="Registrar"><u>Not a member?</u></string>
     <string name="noregistrado">Access without registration</string>
     <string name="formulario">Form</string>
     <string name="email">Email</string>

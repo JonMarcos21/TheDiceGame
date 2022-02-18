@@ -9,20 +9,20 @@
 
     <ImageView
         android:id="@+id/logoPrincipal"
-        android:layout_width="wrap_content"
-        android:layout_height="144dp"
+        android:layout_width="235dp"
+        android:layout_height="105dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="94dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginEnd="84dp"
         app:srcCompat="@drawable/logodado" />
 
     <TextView
         android:id="@+id/nombreApp"
-        android:layout_width="152dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
         android:layout_below="@+id/logoPrincipal"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -31,9 +31,10 @@
         android:layout_marginEnd="125dp"
         android:contentDescription="texto app"
         android:fontFamily="@font/fredoka_nomral"
+        android:gravity="center|center_vertical"
         android:text="@string/app_name"
         android:textColor="@color/black"
-        android:textSize="35sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/Usuario"
@@ -42,9 +43,9 @@
         android:layout_below="@+id/nombreApp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="90dp"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="90dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
@@ -59,7 +60,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="90dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="90dp"
         android:ems="10"
         android:hint="@string/contraseña"
         android:inputType="textPassword"
@@ -69,42 +70,53 @@
 
     <Button
         android:id="@+id/acceso"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Contraseña"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="7dp"
-        android:background="@drawable/button_rounder"
-        android:fontFamily="@font/fredoka_nomral"
-        android:onClick="acceso"
-        android:text="@string/Acceso" />
-
-    <Button
-        android:id="@+id/registrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Contraseña"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/acceso"
-        android:background="@drawable/button_rounder"
-        android:fontFamily="@font/fredoka_nomral"
-        android:onClick="registro"
-        android:text="@string/Registrar" />
-
-    <TextView
-        android:id="@+id/noregistrado"
-        android:layout_width="wrap_content"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Contraseña"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="73dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/button_rounder"
         android:fontFamily="@font/fredoka_nomral"
-        android:text="@string/noregistrado"
-        android:textColor="@color/black"
+        android:onClick="acceso"
+        android:text="@string/Acceso"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acceso"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="90dp"
+        android:background="@drawable/button_rounder"
+        android:fontFamily="@font/fredoka_nomral"
+        android:onClick="play"
+        android:text="@string/play"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnPlay"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="@font/fredoka_nomral"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:onClick="registro"
+        android:text="@string/Registrar"
+        android:textColor="#2196F3"
+        android:textSize="20sp" />
+
 </RelativeLayout>
