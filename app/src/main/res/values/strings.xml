@@ -12,4 +12,5 @@
     <string name="jugar">press the button to play</string>
     <string name="play">Play</string>
     <string name="salir">Close sesion</string>
+    <string name="registrar2">Register</string>
 </resources>
