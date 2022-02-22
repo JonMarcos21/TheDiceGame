@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +30,7 @@ public class Formulario extends AppCompatActivity {
     private EditText mEditTextContraseña;
 
     private Button registrar;
+
 
     //varibles de datos a registrar
     private String nombre ="";
@@ -79,6 +81,15 @@ public class Formulario extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    //Métdo para dar para atras en el formulario
+    public void atras(View view){
+
+        Intent atras = new Intent(this, Registro.class);
+        startActivity(atras);
+        finish();
 
     }
 
