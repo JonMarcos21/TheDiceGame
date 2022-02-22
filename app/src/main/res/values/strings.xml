@@ -13,4 +13,7 @@
     <string name="play">Play</string>
     <string name="salir">Close sesion</string>
     <string name="registrar2">Register</string>
+    <string name="go">¡Adelante!</string>
+    <string name="numero">Número:</string>
+    <string name="lanzar">Lanzar dado</string>
 </resources>

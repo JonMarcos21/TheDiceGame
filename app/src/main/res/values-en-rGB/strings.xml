@@ -14,4 +14,7 @@
     <string name="play">Play</string>
     <string name="salir">Close sesion</string>
     <string name="registrar2">Register</string>
+    <string name="go">GO!</string>
+    <string name="numero">Number</string>
+    <string name="lanzar">Throw dice</string>
 </resources>
