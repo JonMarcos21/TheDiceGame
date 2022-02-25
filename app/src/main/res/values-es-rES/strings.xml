@@ -14,7 +14,8 @@
     <string name="play">Jugar</string>
     <string name="salir">Cerrar sesión</string>
     <string name="registrar2">Registrar</string>
-    <string name="go">GO!</string>
-    <string name="numero">Number:</string>
-    <string name="lanzar">Throw dice</string>
+    <string name="go">¡Adelante!</string>
+    <string name="numero">Número:</string>
+    <string name="lanzar">Lanzar dado</string>
+    <string name="tirada">Tiradas:</string>
 </resources>

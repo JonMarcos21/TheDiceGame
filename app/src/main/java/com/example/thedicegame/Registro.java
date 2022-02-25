@@ -90,6 +90,7 @@ public class Registro extends AppCompatActivity {
         finish();
 
     }
+    //metodo para acceder a la otra actividad
     public void play(View view){
 
         Intent play = new Intent(this, Juego.class);
@@ -104,11 +105,13 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    //si la tarea es buena decimos que el boton play se active
                     play.setEnabled(true);
                     play.setTextColor(Color.parseColor("#ffffff"));
 
 
                 }
+                // un else que genera un toast en caso de error
                 else {
                     Toast.makeText(Registro.this, "No se pudo iniciar sesion, compruebe los datos", Toast.LENGTH_SHORT).show();
                 }

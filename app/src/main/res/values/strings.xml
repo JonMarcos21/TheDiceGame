@@ -13,7 +13,17 @@
     <string name="play">Play</string>
     <string name="salir">Close sesion</string>
     <string name="registrar2">Register</string>
-    <string name="go">¡Adelante!</string>
-    <string name="numero">Número:</string>
-    <string name="lanzar">Lanzar dado</string>
+    <string name="go">GO!</string>
+    <string name="numero">Number:</string>
+    <string name="lanzar">Throw dice</string>
+    <string name="tirada">Rolls:</string>
+    <string name="title_activity_puntuacion">Puntuacion</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

@@ -25,10 +25,12 @@ import java.util.Map;
 
 public class Formulario extends AppCompatActivity {
 
+    //creamos 3 variables de tipo EditText
     private EditText mEditTextNombre;
     private EditText mEditTextEmail;
     private EditText mEditTextContraseña;
 
+    //Creamos una variable de tipo button
     private Button registrar;
 
 
@@ -37,6 +39,7 @@ public class Formulario extends AppCompatActivity {
     private String email ="";
     private String contraseña ="";
 
+    //hacemos una llamada del metodo firebase para poder logear usuarios
     FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
 
@@ -45,12 +48,14 @@ public class Formulario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.formulario);
 
+        //asignamos las variables a los id de las variables del layout
         mEditTextNombre = (EditText) findViewById(R.id.textoUsuario);
         mEditTextEmail =(EditText) findViewById(R.id.textoEmail);
         mEditTextContraseña = (EditText) findViewById(R.id.textoContraseña);
 
         registrar = (Button) findViewById(R.id.botonEnviar);
 
+        //Instanciamos las variables creadas
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -60,22 +65,26 @@ public class Formulario extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                // asiganamos las variables para que sean rellenadas
                 nombre = mEditTextNombre.getText().toString();
                 email = mEditTextEmail.getText().toString();
                 contraseña = mEditTextContraseña.getText().toString();
 
+                //hacemos un if para que en caso de que los campos esten completos se lanze el metodo registeruser
                 if (!nombre.isEmpty() && !email.isEmpty() && !contraseña.isEmpty()){
 
                     if(contraseña.length()>=6){
                         registerUser();
 
                     }
+                    //un else para que cuando la contraseña no tenga mas de 6 caracteres salte un toast
                     else{
                         Toast.makeText(Formulario.this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
                     }
 
 
                 }
+                // salta un toast si los campos no estan completos
                 else {
                     Toast.makeText(Formulario.this, "Debe completar los campos ", Toast.LENGTH_SHORT).show();
                 }
@@ -102,8 +111,10 @@ public class Formulario extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
 
+                    //si la tarea es buena se lanza
                     startActivity(new Intent(Formulario.this , Registro.class));
                     finish();
+                    // creamos un hash map para guardar los campos
                     Map<String, Object>map = new HashMap<>();
                     map.put("nombre",nombre);
                     map.put("contraseña",contraseña);

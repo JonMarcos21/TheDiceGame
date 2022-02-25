@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Inicio extends AppCompatActivity {
 
+
     private Button salir;
     private FirebaseAuth mAuth;
     @Override
