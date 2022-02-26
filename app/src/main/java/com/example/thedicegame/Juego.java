@@ -139,7 +139,8 @@ public class Juego extends AppCompatActivity {
 
     private TextView marcador;
     int dado1;
-
+    String nTiradas;
+    int tiradas;
 
 
     @Override
@@ -148,6 +149,7 @@ public class Juego extends AppCompatActivity {
         setContentView(R.layout.juego);
 
         dado = (ImageButton) findViewById(R.id.btnDado);
+
 
         marcador =(TextView) findViewById(R.id.TxtTiradas);
 
@@ -281,7 +283,9 @@ public class Juego extends AppCompatActivity {
     public void lanzar (View view){
 
         dado1 = (int)(Math.random()*6)*1;
-
+        tiradas++;
+        this.nTiradas= String.valueOf(this.tiradas);
+        marcador.setText(nTiradas);
 
         switch (dado1){
             case 1:
@@ -301,6 +305,1690 @@ public class Juego extends AppCompatActivity {
                 break;
             case 6:
                 dado.setImageResource(R.drawable.seis);
+        }
+        dado.setEnabled(false);
+        int xmover=xdado+dado1;
+        int ymover=ydado+dado1;
+
+        int xmover2=xdado-dado1;
+        int ymover2=ydado-dado1;
+
+
+        //Según el resultado del dado activamos las casillas a las que se pueden moverse segun la X
+        if(ydado==0 && xmover==0){
+            btn0x0.setEnabled(true);
+            btn0x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==0){
+            btn0x0.setEnabled(true);
+            btn0x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==1){
+            btn1x0.setEnabled(true);
+            btn1x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==1){
+            btn1x0.setEnabled(true);
+            btn1x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==2){
+            btn2x0.setEnabled(true);
+            btn2x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==2){
+            btn2x0.setEnabled(true);
+            btn2x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==3) {
+            btn3x0.setEnabled(true);
+            btn3x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==3){
+            btn3x0.setEnabled(true);
+            btn3x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==4) {
+            btn4x0.setEnabled(true);
+            btn4x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==4){
+            btn4x0.setEnabled(true);
+            btn4x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==5) {
+            btn5x0.setEnabled(true);
+            btn5x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==5){
+            btn5x0.setEnabled(true);
+            btn5x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==6) {
+            btn6x0.setEnabled(true);
+            btn6x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==6){
+            btn6x0.setEnabled(true);
+            btn6x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==7) {
+            btn7x0.setEnabled(true);
+            btn7x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==7){
+            btn7x0.setEnabled(true);
+            btn7x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==8) {
+            btn8x0.setEnabled(true);
+            btn8x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==8){
+            btn8x0.setEnabled(true);
+            btn8x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover==9) {
+            btn8x0.setEnabled(true);
+            btn8x0.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==0 && xmover2==9){
+            btn8x0.setEnabled(true);
+            btn8x0.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==1 && xmover==0){
+            btn0x1.setEnabled(true);
+            btn0x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==0){
+            btn0x1.setEnabled(true);
+            btn0x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==1){
+            btn1x1.setEnabled(true);
+            btn1x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==1){
+            btn1x1.setEnabled(true);
+            btn1x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==2){
+            btn2x1.setEnabled(true);
+            btn2x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==2){
+            btn2x1.setEnabled(true);
+            btn2x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==3) {
+            btn3x1.setEnabled(true);
+            btn3x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==3){
+            btn3x1.setEnabled(true);
+            btn3x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==4) {
+            btn4x1.setEnabled(true);
+            btn4x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==4){
+            btn4x1.setEnabled(true);
+            btn4x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==5) {
+            btn5x1.setEnabled(true);
+            btn5x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==5){
+            btn5x1.setEnabled(true);
+            btn5x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==6) {
+            btn6x1.setEnabled(true);
+            btn6x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==6){
+            btn6x1.setEnabled(true);
+            btn6x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==7) {
+            btn7x1.setEnabled(true);
+            btn7x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==7){
+            btn7x1.setEnabled(true);
+            btn7x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==8) {
+            btn8x1.setEnabled(true);
+            btn8x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==8){
+            btn8x1.setEnabled(true);
+            btn8x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover==9) {
+            btn9x1.setEnabled(true);
+            btn9x1.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==1 && xmover2==9){
+            btn9x1.setEnabled(true);
+            btn9x1.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==2 && xmover==0){
+            btn0x2.setEnabled(true);
+            btn0x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==0){
+            btn0x2.setEnabled(true);
+            btn0x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==1){
+            btn1x2.setEnabled(true);
+            btn1x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==1){
+            btn1x2.setEnabled(true);
+            btn1x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==2){
+            btn2x2.setEnabled(true);
+            btn2x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==2){
+            btn2x2.setEnabled(true);
+            btn2x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==3) {
+            btn3x2.setEnabled(true);
+            btn3x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==3){
+            btn3x2.setEnabled(true);
+            btn3x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==4) {
+            btn4x2.setEnabled(true);
+            btn4x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==4){
+            btn4x2.setEnabled(true);
+            btn4x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==5) {
+            btn5x2.setEnabled(true);
+            btn5x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==5){
+            btn5x2.setEnabled(true);
+            btn5x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==6) {
+            btn6x2.setEnabled(true);
+            btn6x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==6){
+            btn6x2.setEnabled(true);
+            btn6x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==7) {
+            btn7x2.setEnabled(true);
+            btn7x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==7){
+            btn7x2.setEnabled(true);
+            btn7x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==8) {
+            btn8x2.setEnabled(true);
+            btn8x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==8){
+            btn8x2.setEnabled(true);
+            btn8x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover==9) {
+            btn9x2.setEnabled(true);
+            btn9x2.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==2 && xmover2==9){
+            btn9x2.setEnabled(true);
+            btn9x2.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==3 && xmover==0){
+            btn0x3.setEnabled(true);
+            btn0x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==0){
+            btn0x3.setEnabled(true);
+            btn0x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==1){
+            btn1x3.setEnabled(true);
+            btn1x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==1){
+            btn1x3.setEnabled(true);
+            btn1x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==2){
+            btn2x3.setEnabled(true);
+            btn2x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==2){
+            btn2x3.setEnabled(true);
+            btn2x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==3) {
+            btn3x3.setEnabled(true);
+            btn3x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==3){
+            btn3x3.setEnabled(true);
+            btn3x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==4) {
+            btn4x3.setEnabled(true);
+            btn4x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==4){
+            btn4x3.setEnabled(true);
+            btn4x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==5) {
+            btn5x3.setEnabled(true);
+            btn5x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==5){
+            btn5x3.setEnabled(true);
+            btn5x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==6) {
+            btn6x3.setEnabled(true);
+            btn6x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==6){
+            btn6x3.setEnabled(true);
+            btn6x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==7) {
+            btn7x3.setEnabled(true);
+            btn7x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==7){
+            btn7x3.setEnabled(true);
+            btn7x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==8) {
+            btn8x3.setEnabled(true);
+            btn8x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==8){
+            btn8x3.setEnabled(true);
+            btn8x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover==9) {
+            btn9x3.setEnabled(true);
+            btn9x3.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==3 && xmover2==9){
+            btn9x3.setEnabled(true);
+            btn9x3.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==4 && xmover==0){
+            btn0x4.setEnabled(true);
+            btn0x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==0){
+            btn0x4.setEnabled(true);
+            btn0x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==1){
+            btn1x4.setEnabled(true);
+            btn1x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==1){
+            btn1x4.setEnabled(true);
+            btn1x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==2){
+            btn2x4.setEnabled(true);
+            btn2x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==2){
+            btn2x4.setEnabled(true);
+            btn2x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==3) {
+            btn3x4.setEnabled(true);
+            btn3x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==3){
+            btn3x4.setEnabled(true);
+            btn3x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==4) {
+            btn4x4.setEnabled(true);
+            btn4x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==4){
+            btn4x4.setEnabled(true);
+            btn4x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==5) {
+            btn5x4.setEnabled(true);
+            btn5x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==5){
+            btn5x4.setEnabled(true);
+            btn5x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==6) {
+            btn6x4.setEnabled(true);
+            btn6x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==6){
+            btn6x4.setEnabled(true);
+            btn6x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==7) {
+            btn7x4.setEnabled(true);
+            btn7x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==7){
+            btn7x4.setEnabled(true);
+            btn7x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==8) {
+            btn8x4.setEnabled(true);
+            btn8x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==8){
+            btn8x4.setEnabled(true);
+            btn8x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover==9) {
+            btn9x4.setEnabled(true);
+            btn9x4.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==4 && xmover2==9){
+            btn9x4.setEnabled(true);
+            btn9x4.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==5 && xmover==0){
+            btn0x5.setEnabled(true);
+            btn0x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==0){
+            btn0x5.setEnabled(true);
+            btn0x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==1){
+            btn1x5.setEnabled(true);
+            btn1x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==1){
+            btn1x5.setEnabled(true);
+            btn1x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==2){
+            btn2x5.setEnabled(true);
+            btn2x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==2){
+            btn2x5.setEnabled(true);
+            btn2x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==3) {
+            btn3x5.setEnabled(true);
+            btn3x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==3){
+            btn3x5.setEnabled(true);
+            btn3x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==4) {
+            btn4x5.setEnabled(true);
+            btn4x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==4){
+            btn4x5.setEnabled(true);
+            btn4x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==5) {
+            btn5x5.setEnabled(true);
+            btn5x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==5){
+            btn5x5.setEnabled(true);
+            btn5x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==6) {
+            btn6x5.setEnabled(true);
+            btn6x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==6){
+            btn6x5.setEnabled(true);
+            btn6x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==7) {
+            btn7x5.setEnabled(true);
+            btn7x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==7){
+            btn7x5.setEnabled(true);
+            btn7x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==8) {
+            btn8x5.setEnabled(true);
+            btn8x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==8){
+            btn8x5.setEnabled(true);
+            btn8x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover==9) {
+            btn9x5.setEnabled(true);
+            btn9x5.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==5 && xmover2==9){
+            btn9x5.setEnabled(true);
+            btn9x5.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==6 && xmover==0){
+            btn0x6.setEnabled(true);
+            btn0x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==0){
+            btn0x6.setEnabled(true);
+            btn0x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==1){
+            btn1x6.setEnabled(true);
+            btn1x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==1){
+            btn1x6.setEnabled(true);
+            btn1x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==2){
+            btn2x6.setEnabled(true);
+            btn2x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==2){
+            btn2x6.setEnabled(true);
+            btn2x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==3) {
+            btn3x6.setEnabled(true);
+            btn3x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==3){
+            btn3x6.setEnabled(true);
+            btn3x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==4) {
+            btn4x6.setEnabled(true);
+            btn4x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==4){
+            btn4x6.setEnabled(true);
+            btn4x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==5) {
+            btn5x6.setEnabled(true);
+            btn5x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==5){
+            btn5x6.setEnabled(true);
+            btn5x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==6) {
+            btn6x6.setEnabled(true);
+            btn6x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==6){
+            btn6x6.setEnabled(true);
+            btn6x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==7) {
+            btn7x6.setEnabled(true);
+            btn7x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==7){
+            btn7x6.setEnabled(true);
+            btn7x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==8) {
+            btn8x6.setEnabled(true);
+            btn8x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==8){
+            btn8x6.setEnabled(true);
+            btn8x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover==9) {
+            btn9x6.setEnabled(true);
+            btn9x6.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==6 && xmover2==9){
+            btn9x6.setEnabled(true);
+            btn9x6.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==7 && xmover==0){
+            btn0x7.setEnabled(true);
+            btn0x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==0){
+            btn0x7.setEnabled(true);
+            btn0x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==1){
+            btn1x7.setEnabled(true);
+            btn1x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==1){
+            btn1x7.setEnabled(true);
+            btn1x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==2){
+            btn2x7.setEnabled(true);
+            btn2x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==2){
+            btn2x7.setEnabled(true);
+            btn2x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==3) {
+            btn3x7.setEnabled(true);
+            btn3x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==3){
+            btn3x7.setEnabled(true);
+            btn3x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==4) {
+            btn4x7.setEnabled(true);
+            btn4x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==4){
+            btn4x7.setEnabled(true);
+            btn4x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==5) {
+            btn5x7.setEnabled(true);
+            btn5x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==5){
+            btn5x7.setEnabled(true);
+            btn5x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==6) {
+            btn6x7.setEnabled(true);
+            btn6x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==6){
+            btn6x7.setEnabled(true);
+            btn6x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==7) {
+            btn7x7.setEnabled(true);
+            btn7x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==7){
+            btn7x7.setEnabled(true);
+            btn7x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==8) {
+            btn8x7.setEnabled(true);
+            btn8x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==8){
+            btn8x7.setEnabled(true);
+            btn8x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover==9) {
+            btn9x7.setEnabled(true);
+            btn9x7.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==7 && xmover2==9){
+            btn9x7.setEnabled(true);
+            btn9x7.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==8 && xmover==0){
+            btn0x8.setEnabled(true);
+            btn0x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==0){
+            btn0x8.setEnabled(true);
+            btn0x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==1){
+            btn1x8.setEnabled(true);
+            btn1x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==1){
+            btn1x8.setEnabled(true);
+            btn1x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==2){
+            btn2x8.setEnabled(true);
+            btn2x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==2){
+            btn2x8.setEnabled(true);
+            btn2x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==3) {
+            btn3x8.setEnabled(true);
+            btn3x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==3){
+            btn3x8.setEnabled(true);
+            btn3x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==4) {
+            btn4x8.setEnabled(true);
+            btn4x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==4){
+            btn4x8.setEnabled(true);
+            btn4x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==5) {
+            btn5x8.setEnabled(true);
+            btn5x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==5){
+            btn5x8.setEnabled(true);
+            btn5x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==6) {
+            btn6x8.setEnabled(true);
+            btn6x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==6){
+            btn6x8.setEnabled(true);
+            btn6x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==7) {
+            btn7x8.setEnabled(true);
+            btn7x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==7){
+            btn7x8.setEnabled(true);
+            btn7x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==8) {
+            btn8x8.setEnabled(true);
+            btn8x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==8){
+            btn8x8.setEnabled(true);
+            btn8x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover==9) {
+            btn9x8.setEnabled(true);
+            btn9x8.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==8 && xmover2==9){
+            btn9x8.setEnabled(true);
+            btn9x8.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(ydado==9 && xmover==0){
+            btn0x9.setEnabled(true);
+            btn0x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==0){
+            btn0x9.setEnabled(true);
+            btn0x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==1){
+            btn1x9.setEnabled(true);
+            btn1x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==1){
+            btn1x9.setEnabled(true);
+            btn1x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==2){
+            btn2x9.setEnabled(true);
+            btn2x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==2){
+            btn2x9.setEnabled(true);
+            btn2x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==3) {
+            btn3x9.setEnabled(true);
+            btn3x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==3){
+            btn3x9.setEnabled(true);
+            btn3x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==4) {
+            btn4x9.setEnabled(true);
+            btn4x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==4){
+            btn4x9.setEnabled(true);
+            btn4x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==5) {
+            btn5x9.setEnabled(true);
+            btn5x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==5){
+            btn5x9.setEnabled(true);
+            btn5x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==6) {
+            btn6x9.setEnabled(true);
+            btn6x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==6){
+            btn6x9.setEnabled(true);
+            btn6x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==7) {
+            btn7x9.setEnabled(true);
+            btn7x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==7){
+            btn7x9.setEnabled(true);
+            btn7x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==8) {
+            btn8x9.setEnabled(true);
+            btn8x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==8){
+            btn8x9.setEnabled(true);
+            btn8x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover==9) {
+            btn9x9.setEnabled(true);
+            btn9x9.setImageResource(R.drawable.square_red);
+        }
+        if(ydado==9 && xmover2==9){
+            btn9x9.setEnabled(true);
+            btn9x9.setImageResource(R.drawable.square_red);
+        }
+
+        //Según el resultado del dado activamos las casillas a las que se pueden moverse segun la Y
+
+        if(xdado==0 && ymover==0){
+            btn0x0.setEnabled(true);
+            btn0x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==0){
+            btn0x0.setEnabled(true);
+            btn0x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==1){
+            btn0x1.setEnabled(true);
+            btn0x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==1){
+            btn0x1.setEnabled(true);
+            btn0x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==2){
+            btn0x2.setEnabled(true);
+            btn0x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==2){
+            btn0x2.setEnabled(true);
+            btn0x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==3){
+            btn0x3.setEnabled(true);
+            btn0x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==3){
+            btn0x3.setEnabled(true);
+            btn0x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==4){
+            btn0x4.setEnabled(true);
+            btn0x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==4){
+            btn0x4.setEnabled(true);
+            btn0x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==5){
+            btn0x5.setEnabled(true);
+            btn0x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==5){
+            btn0x5.setEnabled(true);
+            btn0x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==6){
+            btn0x6.setEnabled(true);
+            btn0x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==6){
+            btn0x6.setEnabled(true);
+            btn0x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==7){
+            btn0x7.setEnabled(true);
+            btn0x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==7){
+            btn0x7.setEnabled(true);
+            btn0x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==8){
+            btn0x8.setEnabled(true);
+            btn0x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==8){
+            btn0x8.setEnabled(true);
+            btn0x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover==9){
+            btn0x9.setEnabled(true);
+            btn0x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==0 && ymover2==9){
+            btn0x9.setEnabled(true);
+            btn0x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==1 && ymover==0){
+            btn1x0.setEnabled(true);
+            btn1x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==0){
+            btn1x0.setEnabled(true);
+            btn1x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==1){
+            btn1x1.setEnabled(true);
+            btn1x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==1){
+            btn1x1.setEnabled(true);
+            btn1x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==2){
+            btn1x2.setEnabled(true);
+            btn1x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==2){
+            btn1x2.setEnabled(true);
+            btn1x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==3){
+            btn1x3.setEnabled(true);
+            btn1x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==3){
+            btn1x3.setEnabled(true);
+            btn1x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==4){
+            btn1x4.setEnabled(true);
+            btn1x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==4){
+            btn1x4.setEnabled(true);
+            btn1x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==5){
+            btn1x5.setEnabled(true);
+            btn1x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==5){
+            btn1x5.setEnabled(true);
+            btn1x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==6){
+            btn1x6.setEnabled(true);
+            btn1x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==6){
+            btn1x6.setEnabled(true);
+            btn1x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==7){
+            btn1x7.setEnabled(true);
+            btn1x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==7){
+            btn1x7.setEnabled(true);
+            btn1x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==8){
+            btn1x8.setEnabled(true);
+            btn1x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==8){
+            btn1x8.setEnabled(true);
+            btn1x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover==9){
+            btn1x9.setEnabled(true);
+            btn1x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==1 && ymover2==9){
+            btn1x9.setEnabled(true);
+            btn1x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==2 && ymover==0){
+            btn2x0.setEnabled(true);
+            btn2x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==0){
+            btn2x0.setEnabled(true);
+            btn2x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==1){
+            btn2x1.setEnabled(true);
+            btn2x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==1){
+            btn2x1.setEnabled(true);
+            btn2x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==2){
+            btn2x2.setEnabled(true);
+            btn2x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==2){
+            btn2x2.setEnabled(true);
+            btn2x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==3){
+            btn2x3.setEnabled(true);
+            btn2x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==3){
+            btn2x3.setEnabled(true);
+            btn2x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==4){
+            btn2x4.setEnabled(true);
+            btn2x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==4){
+            btn2x4.setEnabled(true);
+            btn2x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==5){
+            btn2x5.setEnabled(true);
+            btn2x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==5){
+            btn2x5.setEnabled(true);
+            btn2x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==6){
+            btn2x6.setEnabled(true);
+            btn2x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==6){
+            btn2x6.setEnabled(true);
+            btn2x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==7){
+            btn2x7.setEnabled(true);
+            btn2x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==7){
+            btn2x7.setEnabled(true);
+            btn2x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==8){
+            btn2x8.setEnabled(true);
+            btn2x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==8){
+            btn2x8.setEnabled(true);
+            btn2x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover==9){
+            btn2x9.setEnabled(true);
+            btn2x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==2 && ymover2==9){
+            btn2x9.setEnabled(true);
+            btn2x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==3 && ymover==0){
+            btn3x0.setEnabled(true);
+            btn3x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==0){
+            btn3x0.setEnabled(true);
+            btn3x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==1){
+            btn3x1.setEnabled(true);
+            btn3x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==1){
+            btn3x1.setEnabled(true);
+            btn3x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==2){
+            btn3x2.setEnabled(true);
+            btn3x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==2){
+            btn3x2.setEnabled(true);
+            btn3x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==3){
+            btn3x3.setEnabled(true);
+            btn3x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==3){
+            btn3x3.setEnabled(true);
+            btn3x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==4){
+            btn3x4.setEnabled(true);
+            btn3x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==4){
+            btn3x4.setEnabled(true);
+            btn3x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==5){
+            btn3x5.setEnabled(true);
+            btn3x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==5){
+            btn3x5.setEnabled(true);
+            btn3x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==6){
+            btn3x6.setEnabled(true);
+            btn3x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==6){
+            btn3x6.setEnabled(true);
+            btn3x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==7){
+            btn3x7.setEnabled(true);
+            btn3x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==7){
+            btn3x7.setEnabled(true);
+            btn3x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==8){
+            btn3x8.setEnabled(true);
+            btn3x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==8){
+            btn3x8.setEnabled(true);
+            btn3x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover==9){
+            btn3x9.setEnabled(true);
+            btn3x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==3 && ymover2==9){
+            btn3x9.setEnabled(true);
+            btn3x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==4 && ymover==0){
+            btn4x0.setEnabled(true);
+            btn4x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==0){
+            btn4x0.setEnabled(true);
+            btn4x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==1){
+            btn4x1.setEnabled(true);
+            btn4x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==1){
+            btn4x1.setEnabled(true);
+            btn4x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==2){
+            btn4x2.setEnabled(true);
+            btn4x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==2){
+            btn4x2.setEnabled(true);
+            btn4x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==3){
+            btn4x3.setEnabled(true);
+            btn4x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==3){
+            btn4x3.setEnabled(true);
+            btn4x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==4){
+            btn4x4.setEnabled(true);
+            btn4x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==4){
+            btn4x4.setEnabled(true);
+            btn4x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==5){
+            btn4x5.setEnabled(true);
+            btn4x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==5){
+            btn4x5.setEnabled(true);
+            btn4x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==6){
+            btn4x6.setEnabled(true);
+            btn4x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==6){
+            btn4x6.setEnabled(true);
+            btn4x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==7){
+            btn4x7.setEnabled(true);
+            btn4x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==7){
+            btn4x7.setEnabled(true);
+            btn4x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==8){
+            btn4x8.setEnabled(true);
+            btn4x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==8){
+            btn4x8.setEnabled(true);
+            btn4x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover==9){
+            btn4x9.setEnabled(true);
+            btn4x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==4 && ymover2==9){
+            btn4x9.setEnabled(true);
+            btn4x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==5 && ymover==0){
+            btn5x0.setEnabled(true);
+            btn5x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==0){
+            btn5x0.setEnabled(true);
+            btn5x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==1){
+            btn5x1.setEnabled(true);
+            btn5x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==1){
+            btn5x1.setEnabled(true);
+            btn5x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==2){
+            btn5x2.setEnabled(true);
+            btn5x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==2){
+            btn5x2.setEnabled(true);
+            btn5x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==3){
+            btn5x3.setEnabled(true);
+            btn5x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==3){
+            btn5x3.setEnabled(true);
+            btn5x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==4){
+            btn5x4.setEnabled(true);
+            btn5x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==4){
+            btn5x4.setEnabled(true);
+            btn5x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==5){
+            btn5x5.setEnabled(true);
+            btn5x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==5){
+            btn5x5.setEnabled(true);
+            btn5x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==6){
+            btn5x6.setEnabled(true);
+            btn5x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==6){
+            btn5x6.setEnabled(true);
+            btn5x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==7){
+            btn5x7.setEnabled(true);
+            btn5x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==7){
+            btn5x7.setEnabled(true);
+            btn5x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==8){
+            btn5x8.setEnabled(true);
+            btn5x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==8){
+            btn5x8.setEnabled(true);
+            btn5x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover==9){
+            btn5x9.setEnabled(true);
+            btn5x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==5 && ymover2==9){
+            btn5x9.setEnabled(true);
+            btn5x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==6 && ymover==0){
+            btn6x0.setEnabled(true);
+            btn6x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==0){
+            btn6x0.setEnabled(true);
+            btn6x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==1){
+            btn6x1.setEnabled(true);
+            btn6x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==1){
+            btn6x1.setEnabled(true);
+            btn6x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==2){
+            btn6x2.setEnabled(true);
+            btn6x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==2){
+            btn6x2.setEnabled(true);
+            btn6x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==3){
+            btn6x3.setEnabled(true);
+            btn6x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==3){
+            btn6x3.setEnabled(true);
+            btn6x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==4){
+            btn6x4.setEnabled(true);
+            btn6x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==4){
+            btn6x4.setEnabled(true);
+            btn6x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==5){
+            btn6x5.setEnabled(true);
+            btn6x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==5){
+            btn6x5.setEnabled(true);
+            btn6x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==6){
+            btn6x6.setEnabled(true);
+            btn6x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==6){
+            btn6x6.setEnabled(true);
+            btn6x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==7){
+            btn6x7.setEnabled(true);
+            btn6x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==7){
+            btn6x7.setEnabled(true);
+            btn6x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==8){
+            btn6x8.setEnabled(true);
+            btn6x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==8){
+            btn6x8.setEnabled(true);
+            btn6x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover==9){
+            btn6x9.setEnabled(true);
+            btn6x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==6 && ymover2==9){
+            btn6x9.setEnabled(true);
+            btn6x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==7 && ymover==0){
+            btn7x0.setEnabled(true);
+            btn7x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==0){
+            btn7x0.setEnabled(true);
+            btn7x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==1){
+            btn7x1.setEnabled(true);
+            btn7x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==1){
+            btn7x1.setEnabled(true);
+            btn7x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==2){
+            btn7x2.setEnabled(true);
+            btn7x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==2){
+            btn7x2.setEnabled(true);
+            btn7x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==3){
+            btn7x3.setEnabled(true);
+            btn7x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==3){
+            btn7x3.setEnabled(true);
+            btn7x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==4){
+            btn7x4.setEnabled(true);
+            btn7x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==4){
+            btn7x4.setEnabled(true);
+            btn7x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==5){
+            btn7x5.setEnabled(true);
+            btn7x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==5){
+            btn7x5.setEnabled(true);
+            btn7x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==6){
+            btn7x6.setEnabled(true);
+            btn7x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==6){
+            btn7x6.setEnabled(true);
+            btn7x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==7){
+            btn7x7.setEnabled(true);
+            btn7x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==7){
+            btn7x7.setEnabled(true);
+            btn7x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==8){
+            btn7x8.setEnabled(true);
+            btn7x8.setImageResource(R.drawable.square_red);
+        }
+        if(ymover<=9 && xdado==7 && ymover2==8){
+            btn7x8.setEnabled(true);
+            btn7x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover==9){
+            btn7x9.setEnabled(true);
+            btn7x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==7 && ymover2==9){
+            btn7x9.setEnabled(true);
+            btn7x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==8 && ymover==0){
+            btn8x0.setEnabled(true);
+            btn8x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==0){
+            btn8x0.setEnabled(true);
+            btn8x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==1){
+            btn8x1.setEnabled(true);
+            btn8x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==1){
+            btn8x1.setEnabled(true);
+            btn8x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==2){
+            btn8x2.setEnabled(true);
+            btn8x2.setImageResource(R.drawable.square_red);
+        }
+        if(ymover<=9 && xdado==8 && ymover2==2){
+            btn8x2.setEnabled(true);
+            btn8x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==3){
+            btn8x3.setEnabled(true);
+            btn8x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==3){
+            btn8x3.setEnabled(true);
+            btn8x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==4){
+            btn8x4.setEnabled(true);
+            btn8x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==4){
+            btn8x4.setEnabled(true);
+            btn8x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==5){
+            btn8x5.setEnabled(true);
+            btn8x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==5){
+            btn8x5.setEnabled(true);
+            btn8x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==6){
+            btn8x6.setEnabled(true);
+            btn8x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==6){
+            btn8x6.setEnabled(true);
+            btn8x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==7){
+            btn8x7.setEnabled(true);
+            btn8x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==7){
+            btn8x7.setEnabled(true);
+            btn8x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==8){
+            btn8x8.setEnabled(true);
+            btn8x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==8){
+            btn8x8.setEnabled(true);
+            btn8x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover==9){
+            btn8x9.setEnabled(true);
+            btn8x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==8 && ymover2==9){
+            btn8x9.setEnabled(true);
+            btn8x9.setImageResource(R.drawable.square_red);
+        }
+
+
+
+
+        if(xdado==9 && ymover==0){
+            btn9x0.setEnabled(true);
+            btn9x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==0){
+            btn9x0.setEnabled(true);
+            btn9x0.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==1){
+            btn9x1.setEnabled(true);
+            btn9x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==1){
+            btn9x1.setEnabled(true);
+            btn9x1.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==2){
+            btn9x2.setEnabled(true);
+            btn9x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==2){
+            btn9x2.setEnabled(true);
+            btn9x2.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==3){
+            btn9x3.setEnabled(true);
+            btn9x3.setImageResource(R.drawable.square_red);
+        }
+        if(ymover<=9 && xdado==9 && ymover2==3){
+            btn9x3.setEnabled(true);
+            btn9x3.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==4){
+            btn9x4.setEnabled(true);
+            btn9x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==4){
+            btn9x4.setEnabled(true);
+            btn9x4.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==5){
+            btn9x5.setEnabled(true);
+            btn9x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==5){
+            btn9x5.setEnabled(true);
+            btn9x5.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==6){
+            btn9x6.setEnabled(true);
+            btn9x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==6){
+            btn9x6.setEnabled(true);
+            btn9x6.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==7){
+            btn9x7.setEnabled(true);
+            btn9x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==7){
+            btn9x7.setEnabled(true);
+            btn9x7.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==8){
+            btn9x8.setEnabled(true);
+            btn9x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==8){
+            btn9x8.setEnabled(true);
+            btn9x8.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover==9){
+            btn9x9.setEnabled(true);
+            btn9x9.setImageResource(R.drawable.square_red);
+        }
+        if(xdado==9 && ymover2==9){
+            btn9x9.setEnabled(true);
+            btn9x9.setImageResource(R.drawable.square_red);
         }
 
 
@@ -9963,6 +11651,14378 @@ public class Juego extends AppCompatActivity {
         btn7x8.setImageResource(R.drawable.tablero);
         btn8x8.setImageResource(R.drawable.tablero);
         btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla1x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn1x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 1;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla2x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn2x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 2;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla3x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn3x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 3;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla4x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn4x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 4;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla5x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn5x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 5;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla6x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn6x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 6;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla7x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn7x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 7;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla8x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn8x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 8;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla9x4(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn9x4.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 9;
+        ydado = 4;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla0x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn0x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 0;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla1x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn1x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 1;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla2x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn2x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 2;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla3x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn3x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 3;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla4x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn4x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 4;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla5x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn5x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 5;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla6x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn6x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 6;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla7x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn7x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 7;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla8x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn8x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 8;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla9x5(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn9x5.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 9;
+        ydado = 5;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla0x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn0x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 0;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla1x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn1x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 1;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla2x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn2x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 2;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla3x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn3x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 3;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla4x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn4x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 4;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla5x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn5x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 5;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla6x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn6x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 6;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla7x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn7x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 7;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla8x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn8x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 8;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla9x6(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn9x6.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 9;
+        ydado = 6;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla0x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn0x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 0;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla1x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn1x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 1;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla2x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn2x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 2;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+
+    public void casilla3x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn3x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 3;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla4x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn4x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 4;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla5x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn5x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 5;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla6x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn6x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 6;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla7x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn7x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 7;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+
+    public void casilla8x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn8x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 8;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla9x7(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn9x7.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 9;
+        ydado = 7;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla0x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn0x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 0;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla1x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn1x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 1;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla2x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn2x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 2;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla3x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn3x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 3;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla4x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn4x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 4;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla5x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn5x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 5;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla6x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn6x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 6;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla7x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn7x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 7;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla8x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn8x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 8;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla9x8(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn9x8.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 9;
+        ydado = 8;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla0x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn0x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 0;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla1x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn1x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 1;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla2x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn2x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 2;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla3x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn3x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 3;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla4x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn4x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 4;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla5x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn5x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 5;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla6x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn6x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 6;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla7x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn7x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 7;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn8x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla8x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn8x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 8;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
+
+        btn0x9.setImageResource(R.drawable.tablero);
+        btn1x9.setImageResource(R.drawable.tablero);
+        btn2x9.setImageResource(R.drawable.tablero);
+        btn3x9.setImageResource(R.drawable.tablero);
+        btn4x9.setImageResource(R.drawable.tablero);
+        btn5x9.setImageResource(R.drawable.tablero);
+        btn6x9.setImageResource(R.drawable.tablero);
+        btn7x9.setImageResource(R.drawable.tablero);
+
+
+        //Bloqueo los botones de todos las casillas
+        btn0x0.setEnabled(false);
+        btn1x0.setEnabled(false);
+        btn2x0.setEnabled(false);
+        btn3x0.setEnabled(false);
+        btn4x0.setEnabled(false);
+        btn5x0.setEnabled(false);
+        btn6x0.setEnabled(false);
+        btn7x0.setEnabled(false);
+        btn8x0.setEnabled(false);
+        btn9x0.setEnabled(false);
+
+        btn0x1.setEnabled(false);
+        btn1x1.setEnabled(false);
+        btn2x1.setEnabled(false);
+        btn3x1.setEnabled(false);
+        btn4x1.setEnabled(false);
+        btn5x1.setEnabled(false);
+        btn6x1.setEnabled(false);
+        btn7x1.setEnabled(false);
+        btn8x1.setEnabled(false);
+        btn9x1.setEnabled(false);
+
+        btn0x2.setEnabled(false);
+        btn1x2.setEnabled(false);
+        btn2x2.setEnabled(false);
+        btn3x2.setEnabled(false);
+        btn4x2.setEnabled(false);
+        btn5x2.setEnabled(false);
+        btn6x2.setEnabled(false);
+        btn7x2.setEnabled(false);
+        btn8x2.setEnabled(false);
+        btn9x2.setEnabled(false);
+
+        btn0x3.setEnabled(false);
+        btn1x3.setEnabled(false);
+        btn2x3.setEnabled(false);
+        btn3x3.setEnabled(false);
+        btn4x3.setEnabled(false);
+        btn5x3.setEnabled(false);
+        btn6x3.setEnabled(false);
+        btn7x3.setEnabled(false);
+        btn8x3.setEnabled(false);
+        btn9x3.setEnabled(false);
+
+        btn0x4.setEnabled(false);
+        btn1x4.setEnabled(false);
+        btn2x4.setEnabled(false);
+        btn3x4.setEnabled(false);
+        btn4x4.setEnabled(false);
+        btn5x4.setEnabled(false);
+        btn6x4.setEnabled(false);
+        btn7x4.setEnabled(false);
+        btn8x4.setEnabled(false);
+        btn9x4.setEnabled(false);
+
+        btn0x5.setEnabled(false);
+        btn1x5.setEnabled(false);
+        btn2x5.setEnabled(false);
+        btn3x5.setEnabled(false);
+        btn4x5.setEnabled(false);
+        btn5x5.setEnabled(false);
+        btn6x5.setEnabled(false);
+        btn7x5.setEnabled(false);
+        btn8x5.setEnabled(false);
+        btn9x5.setEnabled(false);
+
+        btn0x6.setEnabled(false);
+        btn1x6.setEnabled(false);
+        btn2x6.setEnabled(false);
+        btn3x6.setEnabled(false);
+        btn4x6.setEnabled(false);
+        btn5x6.setEnabled(false);
+        btn6x6.setEnabled(false);
+        btn7x6.setEnabled(false);
+        btn8x6.setEnabled(false);
+        btn9x6.setEnabled(false);
+
+        btn0x7.setEnabled(false);
+        btn1x7.setEnabled(false);
+        btn2x7.setEnabled(false);
+        btn3x7.setEnabled(false);
+        btn4x7.setEnabled(false);
+        btn5x7.setEnabled(false);
+        btn6x7.setEnabled(false);
+        btn7x7.setEnabled(false);
+        btn8x7.setEnabled(false);
+        btn9x7.setEnabled(false);
+
+        btn0x8.setEnabled(false);
+        btn1x8.setEnabled(false);
+        btn2x8.setEnabled(false);
+        btn3x8.setEnabled(false);
+        btn4x8.setEnabled(false);
+        btn5x8.setEnabled(false);
+        btn6x8.setEnabled(false);
+        btn7x8.setEnabled(false);
+        btn8x8.setEnabled(false);
+        btn9x8.setEnabled(false);
+
+        btn0x9.setEnabled(false);
+        btn1x9.setEnabled(false);
+        btn2x9.setEnabled(false);
+        btn3x9.setEnabled(false);
+        btn4x9.setEnabled(false);
+        btn5x9.setEnabled(false);
+        btn6x9.setEnabled(false);
+        btn7x9.setEnabled(false);
+        btn8x9.setEnabled(false);
+        btn9x9.setEnabled(false);
+
+        dado.setEnabled(true);
+    }
+    public void casilla9x9(View view) {
+
+        //Muevo el heroe a la posición seleccionada
+        btn9x9.setImageResource(R.drawable.heroe);
+
+        //Actualizo a X y la Y del array
+        xdado = 9;
+        ydado = 9;
+
+        //Compruebo que el cofre no esté en esta casilla
+        if (tablero[xdado][ydado] == 1) {
+            Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+        }
+
+        //Actulizo la imagen de todas las demas casillas
+        btn0x0.setImageResource(R.drawable.tablero);
+        btn1x0.setImageResource(R.drawable.tablero);
+        btn2x0.setImageResource(R.drawable.tablero);
+        btn3x0.setImageResource(R.drawable.tablero);
+        btn4x0.setImageResource(R.drawable.tablero);
+        btn5x0.setImageResource(R.drawable.tablero);
+        btn6x0.setImageResource(R.drawable.tablero);
+        btn7x0.setImageResource(R.drawable.tablero);
+        btn8x0.setImageResource(R.drawable.tablero);
+        btn9x0.setImageResource(R.drawable.tablero);
+
+
+        btn0x1.setImageResource(R.drawable.tablero);
+        btn1x1.setImageResource(R.drawable.tablero);
+        btn2x1.setImageResource(R.drawable.tablero);
+        btn3x1.setImageResource(R.drawable.tablero);
+        btn4x1.setImageResource(R.drawable.tablero);
+        btn5x1.setImageResource(R.drawable.tablero);
+        btn6x1.setImageResource(R.drawable.tablero);
+        btn7x1.setImageResource(R.drawable.tablero);
+        btn8x1.setImageResource(R.drawable.tablero);
+        btn9x1.setImageResource(R.drawable.tablero);
+
+
+        btn0x2.setImageResource(R.drawable.tablero);
+        btn1x2.setImageResource(R.drawable.tablero);
+        btn2x2.setImageResource(R.drawable.tablero);
+        btn3x2.setImageResource(R.drawable.tablero);
+        btn4x2.setImageResource(R.drawable.tablero);
+        btn5x2.setImageResource(R.drawable.tablero);
+        btn6x2.setImageResource(R.drawable.tablero);
+        btn7x2.setImageResource(R.drawable.tablero);
+        btn8x2.setImageResource(R.drawable.tablero);
+        btn9x2.setImageResource(R.drawable.tablero);
+
+
+        btn0x3.setImageResource(R.drawable.tablero);
+        btn1x3.setImageResource(R.drawable.tablero);
+        btn2x3.setImageResource(R.drawable.tablero);
+        btn3x3.setImageResource(R.drawable.tablero);
+        btn4x3.setImageResource(R.drawable.tablero);
+        btn5x3.setImageResource(R.drawable.tablero);
+        btn6x3.setImageResource(R.drawable.tablero);
+        btn7x3.setImageResource(R.drawable.tablero);
+        btn8x3.setImageResource(R.drawable.tablero);
+        btn9x3.setImageResource(R.drawable.tablero);
+
+
+        btn0x4.setImageResource(R.drawable.tablero);
+        btn1x4.setImageResource(R.drawable.tablero);
+        btn2x4.setImageResource(R.drawable.tablero);
+        btn3x4.setImageResource(R.drawable.tablero);
+        btn4x4.setImageResource(R.drawable.tablero);
+        btn5x4.setImageResource(R.drawable.tablero);
+        btn6x4.setImageResource(R.drawable.tablero);
+        btn7x4.setImageResource(R.drawable.tablero);
+        btn8x4.setImageResource(R.drawable.tablero);
+        btn9x4.setImageResource(R.drawable.tablero);
+
+
+        btn0x5.setImageResource(R.drawable.tablero);
+        btn1x5.setImageResource(R.drawable.tablero);
+        btn2x5.setImageResource(R.drawable.tablero);
+        btn3x5.setImageResource(R.drawable.tablero);
+        btn4x5.setImageResource(R.drawable.tablero);
+        btn5x5.setImageResource(R.drawable.tablero);
+        btn6x5.setImageResource(R.drawable.tablero);
+        btn7x5.setImageResource(R.drawable.tablero);
+        btn8x5.setImageResource(R.drawable.tablero);
+        btn9x5.setImageResource(R.drawable.tablero);
+
+
+        btn0x6.setImageResource(R.drawable.tablero);
+        btn1x6.setImageResource(R.drawable.tablero);
+        btn2x6.setImageResource(R.drawable.tablero);
+        btn3x6.setImageResource(R.drawable.tablero);
+        btn4x6.setImageResource(R.drawable.tablero);
+        btn5x6.setImageResource(R.drawable.tablero);
+        btn6x6.setImageResource(R.drawable.tablero);
+        btn7x6.setImageResource(R.drawable.tablero);
+        btn8x6.setImageResource(R.drawable.tablero);
+        btn9x6.setImageResource(R.drawable.tablero);
+
+
+        btn0x7.setImageResource(R.drawable.tablero);
+        btn1x7.setImageResource(R.drawable.tablero);
+        btn2x7.setImageResource(R.drawable.tablero);
+        btn3x7.setImageResource(R.drawable.tablero);
+        btn4x7.setImageResource(R.drawable.tablero);
+        btn5x7.setImageResource(R.drawable.tablero);
+        btn6x7.setImageResource(R.drawable.tablero);
+        btn7x7.setImageResource(R.drawable.tablero);
+        btn8x7.setImageResource(R.drawable.tablero);
+        btn9x7.setImageResource(R.drawable.tablero);
+
+
+        btn0x8.setImageResource(R.drawable.tablero);
+        btn1x8.setImageResource(R.drawable.tablero);
+        btn2x8.setImageResource(R.drawable.tablero);
+        btn3x8.setImageResource(R.drawable.tablero);
+        btn4x8.setImageResource(R.drawable.tablero);
+        btn5x8.setImageResource(R.drawable.tablero);
+        btn6x8.setImageResource(R.drawable.tablero);
+        btn7x8.setImageResource(R.drawable.tablero);
+        btn8x8.setImageResource(R.drawable.tablero);
+        btn9x8.setImageResource(R.drawable.tablero);
+
 
         btn0x9.setImageResource(R.drawable.tablero);
         btn1x9.setImageResource(R.drawable.tablero);
