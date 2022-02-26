@@ -18,4 +18,9 @@
     <string name="numero">Number</string>
     <string name="lanzar">Throw dice</string>
     <string name="tirada">Rolls:</string>
+    <string name="enhorarabuena">CONGRATULATIONS!</string>
+    <string name="mensajefinal">You managed to get to the end</string>
+    <string name="jugarotravez">Do you want to play again?</string>
+    <string name="salirrrr">Exit</string>
+    <string name="puntuacion">Punctuation</string>
 </resources>

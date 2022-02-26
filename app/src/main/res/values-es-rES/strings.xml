@@ -18,4 +18,9 @@
     <string name="numero">Número:</string>
     <string name="lanzar">Lanzar dado</string>
     <string name="tirada">Tiradas:</string>
+    <string name="enhorarabuena">¡ENHORABUENA!</string>
+    <string name="mensajefinal">Has conseguido llegar hasta el final</string>
+    <string name="jugarotravez">¿Quieres jugar de nuevo?</string>
+    <string name="salirrrr">Salir</string>
+    <string name="puntuacion">Puntuacion:</string>
 </resources>
