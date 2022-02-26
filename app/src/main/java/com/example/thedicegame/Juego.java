@@ -134,6 +134,11 @@ public class Juego extends AppCompatActivity {
     private ImageButton btn9x8;
     private ImageButton btn9x9;
 
+    int xmover;
+    int ymover;
+    int xmover2;
+    int ymover2;
+
 
     int[][]tablero = new int[10][10];
 
@@ -315,11 +320,11 @@ public class Juego extends AppCompatActivity {
                 dado.setImageResource(R.drawable.seis);
         }
         dado.setEnabled(false);
-        int xmover=xdado+dado1;
-        int ymover=ydado+dado1;
+        xmover=xdado+dado1;
+        ymover=ydado+dado1;
 
-        int xmover2=xdado-dado1;
-        int ymover2=ydado-dado1;
+        xmover2=xdado-dado1;
+        ymover2=ydado-dado1;
 
 
         //Según el resultado del dado activamos las casillas a las que se pueden moverse segun la X
