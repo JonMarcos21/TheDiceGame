@@ -2,6 +2,7 @@ package com.example.thedicegame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -278,6 +279,13 @@ public class Juego extends AppCompatActivity {
 
 
 
+    }
+    public void siguiente (){
+
+
+        Intent siguiente = new Intent(this, Puntuacion.class);
+        startActivity(siguiente);
+        finish();
     }
 
     public void lanzar (View view){
@@ -25913,6 +25921,7 @@ public class Juego extends AppCompatActivity {
         //Compruebo que el cofre no esté en esta casilla
         if (tablero[xdado][ydado] == 1) {
             Toast.makeText(Juego.this, "¡Felicidades! ¡has encontrado el cofre!", Toast.LENGTH_SHORT).show();
+            siguiente();
         }
 
         //Actulizo la imagen de todas las demas casillas
