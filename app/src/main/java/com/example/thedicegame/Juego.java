@@ -289,13 +289,14 @@ public class Juego extends AppCompatActivity {
 
 
         Intent siguiente = new Intent(this, Puntuacion.class);
+        siguiente.putExtra("tiradas",tiradas);
         startActivity(siguiente);
         finish();
     }
 
     public void lanzar (View view){
 
-        dado1 = (int)(Math.random()*6)*1;
+        dado1 = (int)(Math.random()*6+1);
         tiradas++;
         this.nTiradas= String.valueOf(this.tiradas);
         marcador.setText(nTiradas);

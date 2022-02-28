@@ -22,5 +22,5 @@
     <string name="mensajefinal">Has conseguido llegar hasta el final</string>
     <string name="jugarotravez">¿Quieres jugar de nuevo?</string>
     <string name="salirrrr">Salir</string>
-    <string name="puntuacion">Puntuacion:</string>
+    <string name="puntuacion">Nmero de tiradas:</string>
 </resources>

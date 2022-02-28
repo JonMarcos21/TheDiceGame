@@ -22,5 +22,5 @@
     <string name="mensajefinal">You managed to get to the end</string>
     <string name="jugarotravez">Do you want to play again?</string>
     <string name="salirrrr">Exit</string>
-    <string name="puntuacion">Punctuation</string>
+    <string name="puntuacion">number of rolls</string>
 </resources>
